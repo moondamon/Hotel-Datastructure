@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content%}
+    {% if full == 0%}
+    
+    <header class="w3-container w3-aqua w3-center" style="padding:28px 16px">
+        <h1 class="w3-margin w3-jumbo" style="color:black">เราได้บันทึกข้อมูลของคุณไว้เเล้ว</h1>
+      </header>
+      <br>
+      <CENTER>
+      <p class="w3-xlarge" >ขอบคุณสำหรับการจอง แล้วเจอกันที่โรงเเรมครับ</p>
+      </CENTER>
+      <br>
+    
+    {% elif full == 1%}
+    <header class="w3-container w3-red w3-center" style="padding:28px 16px">
+        <h1 class="w3-margin w3-jumbo" style="color:white">ห้องได้ถูกจองเต็มเเล้ว</h1>
+      </header>
+      <br>
+      <CENTER>
+      <p class="w3-xlarge" >ขออภัยในความไม่สะดวกครับ</p>
+      </CENTER>
+      <br>
+
+    {% endif %}
+{% endblock%}

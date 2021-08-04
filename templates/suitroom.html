@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content%}
+<body style="background-color: gray;">
+<!--header-->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+    <img class="" src="{% static 'image/web-bg.jpg' %}" alt="web-bg" width="100%" height="600">
+    <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+        <h1 style="font-family: 'Chonburi', cursive; padding:10px 5px">ห้องสวีท</h1>
+    </div>
+</header>
+
+<div class="w3-content" style="max-width:1100px">
+    <!-- About Section -->
+    <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+            <img src="{% static 'image/suite 1.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                width="600" height="750">
+        </div>
+
+        <div class="w3-col m6 w3-padding-large" style="color:#555;">
+            <h1 class="w3-center" style="font-size: 40px;"><b>อธิบายห้องพัก</b></h1><br>
+            <h3 class="w3-center"></h3><p style="font-size:larger;text-align:justify">หรูหราราคาไม่แพง 
+            ห้องสวีทของเราเป็นตัวเลือกที่สมบูรณ์แบบหากคุณกำลังมองหาความหรูหราที่เพิ่มขึ้น 
+            ด้วยแผนผังชั้น 280 ตารางฟุต ห้องสวีทมีพื้นที่พิเศษที่คุณต้องการเพื่อกางออกและเพลิดเพลินไปกับทัศนียภาพอันน่าทึ่งของชายฝั่งทะเล</p>
+
+        </div>
+    </div>
+
+    <div class="w3-container w3-padding-8" id="contact">
+        <h1 style = "color: white; font-size: 40px;">Gallery</h1><br>
+        
+    </div>
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+        <div class="w3-quarter">
+            <img src="{% static 'image/suite 2.jpg' %}" alt="Ste2" style="width:100%">
+
+        </div>
+        <div class="w3-quarter">
+            <img src="{% static 'image/suite 3.jpg' %}" alt="Ste3" style="width:100%">
+
+        </div>
+        <div class="w3-quarter">
+            <img src="{% static 'image/suite 4.jpg' %}" alt="Ste4" style="width:100%">
+
+        </div>
+        <div class="w3-quarter">
+            <img src="{% static 'image/suite 5.jpg' %}" alt="ste5" style="width:100%">
+
+        </div>
+    </div>    
+    <!-- Amenities Section -->
+    <div class="w3-container w3-padding-32 w3-center"  style="color: white;">
+        <h3 style="color: gray; background-color: white; font-size: 40px;">สิ่งอำนวยความสะดวก</h3><br>
+        <img src="{% static 'image/suite amen.jpg' %}" alt="ste amen" class="w3-image" style="display:block;margin:auto" width="800"
+            height="533">
+            <div class="w3-padding-32" style="color:#555">
+            <h2>คุณสมบัติของห้อง</h2>
+            <h3>จำนวนผู้เข้าพัก: 2</h3>
+            <h3>ขนาดห้อง: 280 sq.ft</h3>
+            <h3>ที่นอน: 2 Doubles</h3>
+        </div>
+        <p><a href="/reserved" class="w3-button w3-black w3-section" type="submit"  style="font-size: 30px; color: white">จองห้องพัก คลิ๊ก</a></p>
+    </div>
+</div>
+
+</body>
+{% endblock%}

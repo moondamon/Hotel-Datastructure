@@ -1,0 +1,144 @@
+body
+{
+  background-color :#cdcdcd;
+  color #000;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+p,h1,h2,h3,h4,h5,h6,span
+{
+	padding:2px;
+	margin:0px;
+}
+
+ul
+{
+	margin:2px;
+}
+
+button
+{
+	font-weight: bold;
+	font-size: larger;
+}
+
+.cn-font
+{
+    font-family: "TH SarabunPSK", "Angsana New";
+	font-size: 24px;
+}
+
+.cn-logo
+{
+    font-family: 'Tangerine', serif;
+    font-size: 37px;
+    font-weight: bold;
+    text-shadow: 2px 2px 7px rgba(255, 255, 255, 1);
+	padding: 0px 10px 0px 5px;
+}
+
+.cn-highligt
+{
+    background-color : #9f93e0;
+    color : #000;
+}
+
+.cn-bg-primary
+{
+	background-color:#cf9cd8;
+	color : #000;
+}
+.cn-bg-secondary
+{
+	background-color:#f79646;
+	color : #000;
+}
+.cn-bg-tertiary
+{
+	background-color:#e555b7;
+	color : #000;
+}
+.cn-bg-success
+{
+	background-color : #28a745;
+	color : #fff;
+}
+.cn-bg-danger
+{
+	background-color : #dc3545;
+	color : #fff;
+}
+.cn-bg-warning
+{
+	background-color : #ffc107;
+	color : #000;
+}
+.cn-bg-info
+{
+	background-color : #17a2b8;
+	color : #fff;
+}
+.cn-bg-muted
+{
+	background-color : #f1f1f1;
+	color : #cdcdcd;
+}
+.cn-bg-dark
+{
+	background-color : #343a40;
+	color : #fff;
+}
+.cn-bg-light
+{
+	background-color : #f8f9fa;
+	color : #000;
+}
+.cn-bg-black
+{
+	background-color : #000;
+	color : #fff;
+}
+.cn-bg-white
+{
+	background-color : #fff;
+	color : #000;
+}
+.cn-left
+{
+    float: left;
+	padding: 0px;
+}
+.cn-center
+{
+    margin: auto;
+	padding: 10px;
+ }
+
+.cn-right
+{
+    float: right;
+	padding: 5px;
+}
+
+@media screen and (min-width:800px) 
+{
+	.cn-center
+	{
+		width: 70%;
+	}
+	
+}
+
+.cn-container
+{
+	background-color: #eeeeee;
+	min-height: calc( 100vh - 13px );
+}
+.cn-panel-shadow
+{
+	-webkit-box-shadow: 11px 11px 28px -7px rgba(0,0,0,0.35);
+	-moz-box-shadow: 11px 11px 28px -7px rgba(0,0,0,0.35);
+	box-shadow: 11px 11px 28px -7px rgba(0,0,0,0.35);
+}

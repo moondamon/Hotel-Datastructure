@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content%}
+
+<style>
+  .mySlides {display:none;}
+</style>
+
+<div class="text-white">&nbsp;</div>
+
+<div class="container">
+  <div class="w3-display-container w3-content">
+    <div class="w3-content w3-display-container" style="width:100%">
+      {% comment %} <h2 class="w3-center" style="color: blue;">Enjoy unforgettable experiences in our beach hotel.</h2> {% endcomment %}
+      <img class="mySlides" src="{% static 'image/slideshow1.jpg' %}" style="width:100%">
+      <img class="mySlides" src="{% static 'image/slideshow2.jpg' %}" style="width:100%">
+      <img class="mySlides" src="{% static 'image/slideshow4.jpg' %}" style="width:100%">
+
+      <button class="w3-button w3-display-left" style="color:#fff;font-size:larger" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right" style="color:#fff;font-size:larger"onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+    </script>
+  </div>
+</div>
+
+<div class="container">
+  <div class="w3-content">
+    <center>
+      <h1 style="font-family: 'Chonburi', cursive; padding:10px 5px">ห้องต่างๆ ของเรา</h1>
+    </center>
+    <div>ห้องของเรานั้น ได้มีเเนวคิดให้ผู้เข้าพักได้นอนสบายในบรรยากาศริมชายฝั่งทะเลอันสวยงามที่อยู่ข้างโรงเเรมโดยตรง เรามีห้องให้เลือก 3 แบบด้วยกัน ตามความสะดวกของผู้เข้าพัก</div>
+    
+    <div class="w3-row-padding w3-padding-16">
+      <div class="w3-third w3-margin-bottom">
+        <div style='padding:5px 0px'>
+          <img src="{% static 'image/standard 3.jpg' %}" alt="standard" style="width:100%; border-radius:8px ;">
+        </div>
+        <div class="w3-container" style="border-radius: 8px; background-color:#0073aa;color:#fff">
+          <h2>ห้องเดี่ยว</h2>
+          <h3>เริ่มต้น $99</h3>
+          <p>เตียงเดี่ยว</p>
+          <p><a href="/singleroom" class="w3-button w3-white w3-section" type="submit" style="font-size: larger; border-radius: 10px; color: black">รายละเอียด ></a></p>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <div style='padding:5px 0px'>
+          <img src="{% static 'image/suite 1.jpg' %}" alt="suite" style="width:100%; border-radius: 8px;">
+        </div>
+        <div class="w3-container" style="border-radius: 8px; background-color:#0073aa;color:#fff">
+          <h2>ห้องสวีท</h3>
+          <h3>เริ่มต้น $149</h6>
+          <p>เตียงคู่</p>
+          <p><a href="/suitroom" class="w3-button w3-white w3-section" type="submit" style="font-size: 20px; border-radius: 10px; color: black">รายละเอียด ></a></p>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <div style='padding:5px 0px'>
+          <img src="{% static 'image/cabin 5.jpeg' %}" alt="cabin" style="width:96%; border-radius: 8px;">
+        </div>
+        <div class="w3-container" style="border-radius: 8px; background-color:#0073aa;color:#fff">
+          <h2>บ้านพัก</h3>
+          <h3>เริ่มต้น $199</h6>
+          <p>ขนาดเตียง King-size</p>
+          <p><a href="/cabin" class="w3-button w3-white w3-section" type="submit" style="font-size: 20px; border-radius: 10px; color: black">รายละเอียด ></a></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="w3-row-padding">
+      <div class="w3-col l4 12">
+        <h2 style="color: white; text-shadow: 2px 2px 5px black;padding:5px 0px">About Hotel</h2>
+        <h3 style="padding:5px 0px">ให้ลูกค้าสัมผัสถึงรสชาติชายทะเล</h3>
+        <p style='text-align:justify;color:#555'>โรงแรมของเรานั้นเป็นโรงแรมรีสอร์ทริมทะเล สามารถชมวิวทะเลได้อย่างใกล้ชิด เรามีสิ่งอำนวยความสะดวกครบครัน ทำให้ผู้เข้าพักมีประสบการณ์การเข้าพักที่ดีที่สุด นอกจากนี้เรายังมีห้องพักระดับสูงคือ บ้านพักตากอากาศ บ้านพักตากอากาศนั้นเหมือนเป็นเอกลักษณ์ของที่พักริมชายหาด ในตัวของมันนั้นจะเพิ่มความหรูหราและความสะดวกสบายซึ่งเป็นลักษณะเด่นของที่พักของเรา  เรามีห้องพักทั้งหมด3แบบ ตามจำนวนผู้เข้าพักและงบประมาณ มีความหรูหราและประสบการณ์ดีๆให้ผู้เข้าพักของเรา เรารอคุณอยู่นะครับ</p>
+      </div>
+      <div class="w3-col l8 12">
+        <!-- Image of location/map -->
+        <img src="{% static 'image/cabin 6.jpg' %}" class="w3-image" style="width:100%; border-radius: 12px; box-shadow: 10px 10px 5px white;">
+      </div>
+    </div>
+
+    <div>&nbsp;</div>
+  </div>
+</div>
+
+<div style='padding:5px'>
+  <div class="w3-container w3-padding-16 w3-card " style="border-radius: 12px;background-color: #cfcfcf;">
+    <center>
+      <h3 style="color: white; text-shadow: 2px 2px 5px black;padding:5px 0px">ติดต่อเรา</h3>
+      <p>If you want to sign up please, contact us email:</p>
+      <p>moondamon@gmail.com</p>
+      <p>Our Address: Hua Hin, Prachub Kirikhan, Thailand</p>
+      <p>Phone: 062 659 3924</p>
+    </center>
+  </div>
+</div>
+
+{% endblock%}

@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block content%}
+<style>
+    .list-group-item {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .input-group-text{
+      background-color: black;
+      color: white
+    }
+    
+</style>
+<body style="background-color: gray;">
+<div class="container">    
+    <br>
+    <form action = 'addForm' method = 'post'>
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">ชื่อ-นามสกุล</span>
+            <input type="text" class="form-control" placeholder="" name ='username' aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">เบอร์มือถือ</span>
+            <input type="text" class="form-control" placeholder="" name ='phone' aria-label="Phone" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">วันเช็คอิน</span>
+            <input type="text" class="form-control" aria-label="" placeholder="day" name ='dayin'>
+            <span class="input-group-text">เดือน</span>
+            <input type="text" class="form-control" aria-label="" placeholder="1-12" name ='month1'>
+            <span class="input-group-text">ปี</span>
+            <input type="text" class="form-control" placeholder="Ex.2021" aria-label="" name ='year1'>
+            
+            <span class="input-group-text">วันเช็คเอ้าท์</span>
+
+            <input type="text" class="form-control" aria-label=""placeholder="day" name ='dayout'>
+            <span class="input-group-text">เดือน</span>
+            <input type="text" class="form-control" aria-label=""placeholder="1-12" name ='month'>
+            <span class="input-group-text">ปี</span>
+            <input type="text" class="form-control" aria-label="" placeholder="Ex.2021" name ='year'>
+          </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">ประเภทห้องพัก</label>
+            <select class="form-select" id="inputGroupSelect01" name='typeroom'>
+              <option selected>เลือกห้องพัก</option>
+              <option value="ห้องเดี่ยว">ห้องเดี่ยว</option>
+              <option value="ห้องสูท">ห้องสวีท</option>
+              <option value="บ้านพัก">บ้านพัก</option>
+            </select>
+          </div>
+        
+        <div class="list-group">
+            <CENTER>
+                <button href="/thankuser" class="list-group-item list-group-item-action">ยืนยันการจอง</button>
+            </CENTER>
+        </div>  
+        
+    </form>
+    </br>
+    
+</div>    
+</body>
+{% endblock%}

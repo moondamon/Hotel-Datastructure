@@ -1,0 +1,94 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content%}
+<style>
+    
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+    }
+    #dataTable tr:nth-child(even) {
+      background-color: #dfdfdf;
+    }
+    #dataTable tr:nth-child(odd) {
+     background-color: rgb(255, 255, 255);
+    }
+    h1 {
+        color: rgb(102, 102, 102);
+    }
+    .input-group-text{
+      background-color: black;
+      color: white;
+    }
+    .btn btn-primary{
+      background-color: black;
+    }
+</style>    
+<div class="container" style="width:80%;">
+    <br>
+    <div style='text-align:center'>
+      <form action='searchroom' method="post">
+          {% csrf_token %}
+          <div class="row">
+              <div class="col-12">
+                  <div class="input-group">
+                      <span class="input-group-text" id="basic-addon1">เบอร์มือถือ</span>
+                      <input type="text" class="form-control" placeholder="Phone" name ='userphone' aria-label="Phone" aria-describedby="basic-addon1">
+                  </div>
+              </div>
+          </div>
+          <hr>
+          <div class="row">
+              <div class="col-12" style="text-align:right">
+                  <button type="submit" class="btn btn-primary">ค้นหา</button>
+              </div>
+          </div> 
+      </form>
+    </div>
+    <br>
+</div>
+
+<div class="container">
+  <div class="card-body">
+    {% if press == 1%}
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" >
+            <tr>
+              <td width='80'>ชื่อผู้ใช้ :</td>
+              <td width='200'>{{user}}</td>
+            </tr>
+            <tr>
+              <td width='80' >หมายเลขโทรศัพท์ผู้ใช้ :</td>
+              <td width='200'>{{userphone}}</td>
+            </tr>
+            <tr>
+              <td width='80'>ประเภทห้อง :</td>
+              <td width='200'>{{typeroom}}</td>
+            </tr>
+            <tr>
+              <td width='80'>หมายเลขห้อง :</td>
+              <td width='200'>{{numroom}}</td>
+            </tr>
+            <tr>
+                <td width='80'>วันเช็คอิน :</td>
+                <td width='200'>{{dayin}}</td>
+            </tr>
+            <tr>
+                <td width='80'>วันเช็คเอ้าท์ :</td>
+                <td width='200'>{{dayout}}</td>
+            </tr>
+        </table>
+    {% elif press == 2%}
+      <br>
+      <CENTER>
+          <h1>ไม่มีข้อมูลลูกค้า กรุณาลองใหม่อีกครั้ง</h1>
+      </CENTER> 
+      </br> <!--ตกเเต่งหน้านี้-->
+    {% endif %}
+  </div>
+</div>
+{% endblock%}
